@@ -10,7 +10,7 @@ classDiagram
 
     Person: +relatives List
 
-    Person: +bio List
+    Person: +facts List
 
   class Name
     Name: +family String
