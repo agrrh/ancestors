@@ -1,0 +1,28 @@
+---
+
+kind: pipeline
+type: docker
+name: lint:backend
+
+depends_on: []
+
+steps:
+  - name: lint:flake8
+    image: alpine/flake8:3.9.0
+    commands:
+      - cd ancestors
+      - flake8 ./
+
+  - name: lint:black
+    image: kiwicom/black:20.8b1
+    commands:
+      - cd ancestors
+      - black --check --diff ./
+
+trigger:
+  changeset:
+    includes:
+      - ancestors/**
+  branch:
+    - develop
+    - feat/*
