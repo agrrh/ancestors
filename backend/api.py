@@ -21,6 +21,21 @@ api = Api(app)
 database = Database(**config.database)
 
 
+@api.route("/healthz")
+class HandlerHealthz(Resource):
+    def get(self):
+        health = {
+            "database": database.health(),
+        }
+
+        health_status = all([v.get("status", False) for k, v in health])
+
+        return (
+            health,
+            200 if health_status else 500
+        )
+
+
 @api.route("/account/<string:account_id>")
 class HandlerAccount(Resource):
     def get(self, account_id):
