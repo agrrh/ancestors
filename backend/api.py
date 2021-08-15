@@ -1,10 +1,24 @@
+import os
+import yaml
+
 from flask import Flask
 from flask_restplus import Resource, Api
+
+from box import Box
+
+from model.database import Database
 from model.account import Account
 from model.person import Person
 
+config_path = os.environ.get("CONFIG_PATH", "./config.yml")
+
+with open(config_path) as fp:
+    data = yaml.load(fp)
+    config = Box(config_path)
+
 app = Flask(__name__)
 api = Api(app)
+database = Database(**config.database)
 
 
 @api.route("/account/<string:account_id>")
