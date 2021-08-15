@@ -9,7 +9,6 @@ class Person(object):
         self.birth = None
         self.death = None
 
-        self.father = None
-        self.mother = None
+        self.relatives = []
 
         self.facts = []
