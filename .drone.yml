@@ -42,10 +42,10 @@ steps:
       - yamllint -s ./
 
 trigger:
-  changeset:
-    includes:
-      - *.yml
-      - **/*.yml
+  # changeset:
+  #   includes:
+  #     - *.yml
+  #     - **/*.yml
   branch:
     - master
     - feat/*
