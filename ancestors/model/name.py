@@ -1,5 +1,5 @@
 class Name(object):
-    """docstring for Name."""
+    """Name."""
 
     def __init__(self):
         self.family = None
