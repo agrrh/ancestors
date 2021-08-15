@@ -30,10 +30,7 @@ class HandlerHealthz(Resource):
 
         health_status = all([v.get("status", False) for k, v in health])
 
-        return (
-            health,
-            200 if health_status else 500
-        )
+        return health, 200 if health_status else 500
 
 
 @api.route("/account/<string:account_id>")
