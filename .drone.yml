@@ -26,3 +26,26 @@ trigger:
   branch:
     - master
     - feat/*
+
+---
+
+kind: pipeline
+type: docker
+name: lint:yaml
+
+depends_on: []
+
+steps:
+  - name: lint:yaml
+    image: cytopia/yamllint:1.26
+    commands:
+      - yamllint -s ./
+
+trigger:
+  changeset:
+    includes:
+      - *.yml
+      - **/*.yml
+  branch:
+    - master
+    - feat/*
