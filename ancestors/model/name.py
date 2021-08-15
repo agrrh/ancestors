@@ -7,4 +7,5 @@ class Name(object):
         self.first = None
         self.middle = None
 
-        self.history = []
+        self.took_timestamp = None
+        self.gave_up_timestamp = None
