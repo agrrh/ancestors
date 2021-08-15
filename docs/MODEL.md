@@ -1,32 +1,31 @@
 ```mermaid
 classDiagram
   class Person
-    Person : +id : UUID
+    Person: +id UUID
 
-    Person: +name : Name
+    Person: +name Name
 
-    Person : +birth : Fact
-    Person : +death : Fact
+    Person: +birth Fact
+    Person: +death Fact
 
-    Person : +father : Person
-    Person : +mother : Person
+    Person: +relatives List
 
-    Person : +bio : list
+    Person: +bio List
 
   class Name
-    Name : +family : String
+    Name: +family String
 
-    Name : +first : String
-    Name : +middle : String
+    Name: +first String
+    Name: +middle String
 
-    Name : +history : List
+    Name: +history List
 
   class Fact
-    Fact : +id : UUID
+    Fact: +id UUID
 
-    Fact : +location : Location
-    Fact : +timestamp : DateTime
-    Fact : +description : String
+    Fact: +location Location
+    Fact: +timestamp DateTime
+    Fact: +description String
 
   Person <|-- Name
   Person <|-- Fact
