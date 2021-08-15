@@ -1,10 +1,10 @@
 class Person(object):
-    """docstring for Person."""
+    """Person."""
 
     def __init__(self, **kwargs):
         self.id = kwargs.get("id")
 
-        self.name = None
+        self.names = []
 
         self.birth = None
         self.death = None
