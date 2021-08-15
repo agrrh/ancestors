@@ -2,7 +2,7 @@ class Person(object):
     """docstring for Person."""
 
     def __init__(self, **kwargs):
-        self.id = kwargs.get('id')
+        self.id = kwargs.get("id")
 
         self.name = None
 
