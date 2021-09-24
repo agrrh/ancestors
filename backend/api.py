@@ -13,8 +13,8 @@ from model.person import Person
 config_path = os.environ.get("CONFIG_PATH", "./config.yml")
 
 with open(config_path) as fp:
-    data = yaml.load(fp)
-    config = Box(config_path)
+    data = yaml.load(fp, Loader=yaml.FullLoader)
+    config = Box(data)
 
 app = Flask(__name__)
 api = Api(app)

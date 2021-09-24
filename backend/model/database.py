@@ -1,7 +1,7 @@
 class Database(object):
     """Database."""
 
-    def __init__(self, host, port, user, pass_):
+    def __init__(self, address, port, username, password):
         self.handler = None
 
     def health(self):
