@@ -5,4 +5,6 @@ class Database(object):
         self.handler = None
 
     def health(self):
-        return self.handler.ping()
+        return {
+            "status": True
+        }
