@@ -1,8 +1,8 @@
 build:
-	docker build ./ancestors/ -t noyr:dev
+	docker build ./backend/ -t local/ancestors:dev
 
 run: build
 	docker run --rm -ti \
 		--network host \
 		-v $$(pwd)/ancestors:/app \
-		agrrh/ancestors:dev
+		local/ancestors:dev
