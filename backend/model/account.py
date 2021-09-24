@@ -5,4 +5,4 @@ class Account(object):
         self.id = kwargs.get("id")
 
         self.email = None
-        self.password = None
+        # self.password = None
