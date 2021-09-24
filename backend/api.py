@@ -28,7 +28,13 @@ class HandlerHealthz(Resource):
             "database": database.health(),
         }
 
-        health_status = all([v.get("status", False) for k, v in health])
+        # fmt: off
+        health_status = all([
+            v.get("status", False)
+            for k, v
+            in health
+        ])
+        # fmt: on
 
         return health, 200 if health_status else 500
 
