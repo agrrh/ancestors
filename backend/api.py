@@ -32,7 +32,7 @@ class HandlerHealthz(Resource):
         health_status = all([
             v.get("status", False)
             for k, v
-            in health
+            in health.items()
         ])
         # fmt: on
 
