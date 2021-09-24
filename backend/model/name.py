@@ -2,10 +2,10 @@ class Name(object):
     """Name."""
 
     def __init__(self):
-        self.family = None
+        self.family = None  # Ivanov
 
-        self.first = None
-        self.middle = None
+        self.first = None   # Ivan
+        self.middle = None  # Ivanovitch
 
-        self.took_timestamp = None
-        self.gave_up_timestamp = None
+        self.given = None
+        self.changed = None
