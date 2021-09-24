@@ -7,4 +7,5 @@ class Fact(object):
         self.location = None
         self.timestamp = None
 
-        self.description = None
+        self.content_type = "raw"  # raw, markdown
+        self.content = None
