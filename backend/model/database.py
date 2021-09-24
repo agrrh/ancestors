@@ -5,6 +5,4 @@ class Database(object):
         self.handler = None
 
     def health(self):
-        return {
-            "status": True
-        }
+        return {"status": True}
