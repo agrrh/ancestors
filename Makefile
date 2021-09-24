@@ -4,5 +4,5 @@ build:
 run: build
 	docker run --rm -ti \
 		--network host \
-		-v $$(pwd)/ancestors:/app \
+		-v $$(pwd)/backend:/app \
 		local/ancestors:dev
